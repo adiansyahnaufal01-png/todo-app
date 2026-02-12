@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Task Manager</h1>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="stat">
+            <span class="stat-label">Total Tugas</span>
+            <span class="stat-value" id="totalTasks">0</span>
+        </div>
+        <div class="stat">
+            <span class="stat-label">Selesai</span>
+            <span class="stat-value completed" id="completedTasks">0</span>
+        </div>
+        <div class="stat">
+            <span class="stat-label">Belum Selesai</span>
+            <span class="stat-value pending" id="pendingTasks">0</span>
+        </div>
+    </div>
+
+    <!-- KATEGORI -->
+    <div class="category-manager">
+        <h2>Kategori Tugas</h2>
+
+        <div class="category-input-group">
+            <input type="text" id="categoryName" placeholder="Nama kategori">
+            <input type="color" id="categoryColor" value="#00d4ff">
+            <input type="text" id="categoryIcon" placeholder="Icon" value="📌">
+            <button id="addCategoryBtn">+ Tambah</button>
+        </div>
+
+        <ul id="categoryList"></ul>
+    </div>
+
+    <!-- TAMBAH TUGAS -->
+    <div class="task-input-section">
+        <h2>Buat Tugas Baru</h2>
+        
+        <div class="task-input-group">
+            <input type="text" id="taskInput" placeholder="Deskripsi tugas...">
+            
+            <select id="categorySelect">
+                <option value="">Pilih Kategori</option>
+            </select>
+
+            <input type="date" id="taskDate">
+            
+            <button id="addBtn">Buat Tugas</button>
+        </div>
+    </div>
+
+    <!-- FILTER -->
+    <div class="filter-section">
+        <h2>Filter</h2>
+        <div class="filter-area" id="filterArea"></div>
+        <div class="date-filter">
+            <label>Dari tanggal:</label>
+            <input type="date" id="filterDateStart">
+            <label>Sampai tanggal:</label>
+            <input type="date" id="filterDateEnd">
+            <button id="clearDateFilter">Bersihkan</button>
+        </div>
+    </div>
+
+    <!-- DAFTAR TUGAS -->
+    <div class="task-list-section">
+        <h2>Daftar Tugas</h2>
+        <ul id="taskList"></ul>
+    </div>
+
+</div>
+
+<!-- CELEBRATION ANIMATION -->
+<div id="celebrationContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
